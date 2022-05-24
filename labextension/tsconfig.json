@@ -12,7 +12,8 @@
     "strict": true,
     "strictNullChecks": false,
     "types": [],
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "skipLibCheck": true
   },
   "include": ["src/*"]
 }
