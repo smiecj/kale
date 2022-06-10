@@ -340,10 +340,11 @@ export default class NotebookUtilities {
    * Source code here: https://github.com/jupyterlab/jupyterlab/tree/473348d25bcb258ca2f0c127dd8fb5b193217135/packages/services
    */
   public static async createNewKernel() {
-    const defaultKernelSpec = await KernelSpecAPI.getSpecs().then(
+    /* const defaultKernelSpec = await KernelSpecAPI.getSpecs().then(
       (res: KernelSpecAPI.ISpecModels) => res.default,
-    );
-    return await new KernelManager().startNew({ name: defaultKernelSpec });
+    ); */
+    const jupyter_env_name = "py3_8_jupyter_system";
+    return await new KernelManager().startNew({ name: jupyter_env_name });
   }
 
   // TODO: We can use this context manager to execute commands inside a new kernel

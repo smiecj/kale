@@ -86,6 +86,7 @@ async function activate(
   let rokError: IRPCError = null;
   if (backend) {
     try {
+      console.log("[test] kernel name: " + kernel.name)
       await executeRpc(kernel, 'log.setup_logging');
     } catch (error) {
       globalUnhandledRejection({ reason: error });
