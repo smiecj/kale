@@ -15,9 +15,9 @@
  */
 
 import * as React from 'react';
-import TextField, { BaseTextFieldProps } from '@material-ui/core/TextField';
-import { MenuItem, Zoom } from '@material-ui/core';
-import { createStyles, makeStyles } from '@material-ui/core/styles';
+import TextField, { BaseTextFieldProps } from '@mui/material/TextField';
+import { MenuItem, Zoom } from '@mui/material';
+import { makeStyles, createStyles } from '@mui/styles';
 import { LightTooltip } from './LightTooltip';
 
 export interface ISelectOption {
@@ -114,7 +114,8 @@ export const Select: React.FunctionComponent<SelectProps> = props => {
             <LightTooltip
               title={option.tooltip}
               placement="top-start"
-              interactive={!(typeof option.tooltip === 'string')}
+              disableInteractive={(typeof option.tooltip === 'string')}
+              // interactive={!(typeof option.tooltip === 'string')}
               TransitionComponent={Zoom}
             >
               <div

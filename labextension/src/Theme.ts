@@ -1,6 +1,7 @@
-import { createMuiTheme } from '@material-ui/core/styles';
+// import { createMuiTheme } from '@mui/material/styles';
+import { createTheme } from '@mui/material/styles';
 
-declare module '@material-ui/core/styles/createMuiTheme' {
+declare module '@mui/material/styles/createTheme' {
   interface Theme {
     kale: {
       headers: {
@@ -18,7 +19,7 @@ declare module '@material-ui/core/styles/createMuiTheme' {
   }
 }
 
-export const theme = createMuiTheme({
+export const theme = createTheme({
   palette: {
     secondary: {
       main: '#753BBD',

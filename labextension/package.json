@@ -1,5 +1,5 @@
 {
-  "name": "kubeflow-kale-labextension",
+  "name": "@jupyterlab/kale",
   "version": "0.7.0",
   "description": "Convert Notebooks to Kubeflow pipelines with Kale",
   "keywords": [
@@ -42,11 +42,12 @@
     "@jupyterlab/coreutils": "^5.1.0",
     "@jupyterlab/notebook": "^3.1.0",
     "@lumino/widgets": "^1.8.0",
-    "@material-ui/core": "4.11.3",
-    "@material-ui/icons": "4.11.3",
+    "@mui/material": "5.8.7",
+    "@mui/icons-material": "5.8.4",
+    "@mui/styles": "5.8.7",
     "@types/js-yaml": "^3.12.4",
     "@types/node": "^14.0.20",
-    "@types/react-dom": "^16.9.0",
+    "@types/react-dom": "^17.0.0",
     "js-yaml": "^3.14.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
@@ -54,6 +55,7 @@
     "use-debounce": "^3.0.1"
   },
   "devDependencies": {
+    "@jupyterlab/builder": "^3.0.0",
     "husky": "^4.2.3",
     "prettier": "^1.19.1",
     "pretty-quick": "^2.0.1",
@@ -61,17 +63,13 @@
     "typescript": "3.8.3"
   },
   "resolutions": {
-    "@types/react": "^16.9.0"
+    "@types/react": "^17.0.0"
   },
   "publishConfig": {
     "access": "public"
   },
   "jupyterlab": {
-    "extension": true
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "jlpm format:check:staged"
-    }
+    "extension": true,
+    "outputDir": "@jupyterlab/kale"
   }
 }

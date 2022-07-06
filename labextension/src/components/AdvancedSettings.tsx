@@ -16,8 +16,8 @@
 
 import * as React from 'react';
 import { Input } from './Input';
-import { Switch } from '@material-ui/core';
-import { useTheme } from '@material-ui/core/styles';
+import { Switch } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import { theme } from '../Theme';
 
 interface AdvancedSettingsProps {

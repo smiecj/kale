@@ -16,8 +16,8 @@
 
 import * as React from 'react';
 import { useDebouncedCallback } from 'use-debounce';
-import TextField, { OutlinedTextFieldProps } from '@material-ui/core/TextField';
-import { createStyles, makeStyles } from '@material-ui/core/styles';
+import TextField, { OutlinedTextFieldProps } from '@mui/material/TextField';
+import { makeStyles, createStyles } from '@mui/styles';
 
 const useStyles = makeStyles(() =>
   createStyles({

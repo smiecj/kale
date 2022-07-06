@@ -14,8 +14,10 @@
  * limitations under the License.
  */
 
-import { Theme, withStyles } from '@material-ui/core/styles';
-import { Tooltip } from '@material-ui/core';
+import { withStyles } from '@mui/styles';
+import { Theme } from '@mui/material/styles';
+
+import { Tooltip } from '@mui/material';
 
 export const LightTooltip = withStyles((theme: Theme) => ({
   tooltip: {
@@ -24,4 +26,16 @@ export const LightTooltip = withStyles((theme: Theme) => ({
     boxShadow: theme.shadows[1],
     fontSize: 'var(--jp-ui-font-size1)',
   },
-}))(Tooltip);
+})) (Tooltip);
+
+
+/*
+export const LightTooltip = withStyles((theme: Theme) => ({
+  tooltip: {
+    backgroundColor: theme.palette.common.white,
+    color: 'rgba(0, 0, 0, 0.87)',
+    boxShadow: theme.shadows[1],
+    fontSize: 'var(--jp-ui-font-size1)',
+  },
+})(({ theme }) => ({ root: { background: theme.palette.primary.main }})));
+*/

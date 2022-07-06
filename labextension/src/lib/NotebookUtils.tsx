@@ -25,6 +25,7 @@ import {
 import { CommandRegistry } from '@lumino/commands';
 // @ts-ignore
 import SanitizedHTML from 'react-sanitized-html';
+// import sanitizeHtml from 'sanitize-html';
 import * as React from 'react';
 import { ReactElement } from 'react';
 import {

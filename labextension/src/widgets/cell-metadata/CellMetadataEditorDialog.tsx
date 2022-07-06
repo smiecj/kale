@@ -24,7 +24,7 @@ import {
   DialogTitle,
   Grid,
   Switch,
-} from '@material-ui/core';
+} from '@mui/material';
 import ColorUtils from '../../lib/ColorUtils';
 import { Input } from '../../components/Input';
 import { Select } from '../../components/Select';
@@ -81,14 +81,14 @@ export const CellMetadataEditorDialog: React.FunctionComponent<ICellMetadataEdit
         <Grid
           container
           direction="row"
-          justify="space-between"
+          justifyContent="space-between"
           alignItems="center"
         >
           <Grid item xs={9}>
             <Grid
               container
               direction="row"
-              justify="flex-start"
+              justifyContent="flex-start"
               alignItems="center"
             >
               <p>Require GPU for step </p>
@@ -107,7 +107,7 @@ export const CellMetadataEditorDialog: React.FunctionComponent<ICellMetadataEdit
             <Grid
               container
               direction="row"
-              justify="flex-end"
+              justifyContent="flex-end"
               alignItems="center"
             >
               <Switch
@@ -132,11 +132,11 @@ export const CellMetadataEditorDialog: React.FunctionComponent<ICellMetadataEdit
         </Grid>
       </DialogTitle>
       <DialogContent dividers={true} style={{ paddingTop: 0 }}>
-        <Grid container direction="column" justify="center" alignItems="center">
+        <Grid container direction="column" justifyContent="center" alignItems="center">
           <Grid
             container
             direction="row"
-            justify="space-between"
+            justifyContent="space-between"
             alignItems="center"
             style={{ marginTop: '15px' }}
           >

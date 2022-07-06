@@ -12,15 +12,15 @@ import {
   IconButton,
   CircularProgress,
   Zoom,
-} from '@material-ui/core';
-import AddIcon from '@material-ui/icons/Add';
-import Help from '@material-ui/icons/Help';
-import DeleteIcon from '@material-ui/icons/Delete';
+} from '@mui/material';
+import AddIcon from '@mui/icons-material/Add';
+import Help from '@mui/icons-material/Help';
+import DeleteIcon from '@mui/icons-material/Delete';
 import { IKatibMetadata, IKatibParameter } from './LeftPanel';
 import { NotebookPanel } from '@jupyterlab/notebook';
 import { executeRpc, RPC_CALL_STATUS, RPCError } from '../lib/RPCUtils';
 import { Kernel } from '@jupyterlab/services';
-import { useTheme } from '@material-ui/core/styles';
+import { useTheme } from '@mui/material/styles';
 import { Input } from '../components/Input';
 import { Select } from '../components/Select';
 import { LightTooltip } from '../components/LightTooltip';
@@ -441,7 +441,7 @@ export const KatibDialog: React.FunctionComponent<KabitDialog> = props => {
         <Grid
           container
           direction="row"
-          justify="flex-start"
+          justifyContent="flex-start"
           alignItems="center"
         >
           <div
@@ -453,7 +453,7 @@ export const KatibDialog: React.FunctionComponent<KabitDialog> = props => {
           <LightTooltip
             title={helpContent}
             placement="top-start"
-            interactive={true}
+            // interactive={true}
             TransitionComponent={Zoom}
           >
             <Help
@@ -493,7 +493,7 @@ export const KatibDialog: React.FunctionComponent<KabitDialog> = props => {
           <Grid
             container
             direction="column"
-            justify="flex-end"
+            justifyContent="flex-end"
             alignItems="center"
           >
             {(metadataParameter.feasibleSpace.list || []).map((value, idx) => {
@@ -501,7 +501,7 @@ export const KatibDialog: React.FunctionComponent<KabitDialog> = props => {
                 <Grid
                   container
                   direction="row"
-                  justify="flex-end"
+                  justifyContent="flex-end"
                   alignItems="center"
                 >
                   <Input
@@ -542,7 +542,7 @@ export const KatibDialog: React.FunctionComponent<KabitDialog> = props => {
             <Grid
               container
               direction="row"
-              justify="flex-end"
+              justifyContent="flex-end"
               alignItems="center"
             >
               <div className="add-button" style={{ padding: 0 }}>
@@ -571,7 +571,7 @@ export const KatibDialog: React.FunctionComponent<KabitDialog> = props => {
           <Grid
             container
             direction="row"
-            justify="flex-end"
+            justifyContent="flex-end"
             alignItems="center"
           >
             <Grid item xs={3}>
@@ -624,7 +624,7 @@ export const KatibDialog: React.FunctionComponent<KabitDialog> = props => {
             <Grid
               container
               direction="row"
-              justify="flex-start"
+              justifyContent="flex-start"
               alignItems="center"
             >
               <Grid item xs={1}>
@@ -722,7 +722,7 @@ export const KatibDialog: React.FunctionComponent<KabitDialog> = props => {
       <Grid
         container
         direction="column"
-        justify="center"
+        justifyContent="center"
         alignItems="center"
         style={{ marginTop: '20px' }}
       >
@@ -735,7 +735,7 @@ export const KatibDialog: React.FunctionComponent<KabitDialog> = props => {
       <Grid
         container
         direction="column"
-        justify="center"
+        justifyContent="center"
         alignItems="flex-start"
       >
         <p style={{ marginTop: '10px' }}>
@@ -784,7 +784,7 @@ export const KatibDialog: React.FunctionComponent<KabitDialog> = props => {
           <Grid
             container
             direction="row"
-            justify="flex-start"
+            justifyContent="flex-start"
             alignItems="center"
           >
             <Input
@@ -804,7 +804,7 @@ export const KatibDialog: React.FunctionComponent<KabitDialog> = props => {
         'bayesianoptimization' ? (
         <React.Fragment>
           <Divider variant="middle" style={{ margin: '10px' }} />
-          <Grid container direction="row" justify="center" alignItems="center">
+          <Grid container direction="row" justifyContent="center" alignItems="center">
             <Grid item xs={9}>
               <Select
                 variant="outlined"
@@ -833,7 +833,7 @@ export const KatibDialog: React.FunctionComponent<KabitDialog> = props => {
               />
             </Grid>
           </Grid>
-          <Grid container direction="row" justify="center" alignItems="center">
+          <Grid container direction="row" justifyContent="center" alignItems="center">
             <Grid item xs={5}>
               <Select
                 variant="outlined"
@@ -889,7 +889,7 @@ export const KatibDialog: React.FunctionComponent<KabitDialog> = props => {
         </a>,
       )}
 
-      <Grid container direction="row" justify="center" alignItems="center">
+      <Grid container direction="row" justifyContent="center" alignItems="center">
         <Grid item xs={4}>
           <Select
             variant="outlined"
@@ -937,7 +937,7 @@ export const KatibDialog: React.FunctionComponent<KabitDialog> = props => {
         </a>,
       )}
 
-      <Grid container direction="row" justify="center" alignItems="center">
+      <Grid container direction="row" justifyContent="center" alignItems="center">
         <Grid item xs={4}>
           <Input
             validation="int"
